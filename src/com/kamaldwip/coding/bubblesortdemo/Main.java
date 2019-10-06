@@ -1,5 +1,7 @@
 package com.kamaldwip.coding.bubblesortdemo;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -21,19 +23,20 @@ public class Main {
                         arr = swap(arr, i, i + 1);
                     }
                 }
+
             }
+            System.out.println("After Iteration Array now is = "+ Arrays.toString(arr));
         }
-        System.out.println("Sorted Array is :");
-        for(int i = 0; i< arr.length ; i++){
-            System.out.println(arr[i]);
-        }
+        System.out.println("Sorted Array is :"+Arrays.toString(arr));
 
     }
 
     private static int[] swap(int[] arr, int i, int j) {
+        System.out.println("Input numbers are "+arr[i]+" and "+arr[j]);
         arr[i] = arr[i] + arr[j];
         arr[j] = arr[i] - arr[j];
         arr[i] = arr[i] - arr[j];
+        System.out.println("After Swapping numbers are "+arr[i]+" and "+arr[j]);
         return arr;
     }
 
